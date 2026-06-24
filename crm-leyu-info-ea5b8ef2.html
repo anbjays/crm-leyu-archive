@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>leyu · 快速了解这个站点的用途</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1e293b;
+      padding: 2rem 1.25rem;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    /* 开场白 —— 像纸页的上方留白 */
+    .opening {
+      margin-bottom: 2.8rem;
+      text-align: left;
+    }
+
+    .opening p {
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+      max-width: 680px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 0.8rem 1.2rem;
+      border-left: 4px solid #94a3b8;
+      border-radius: 0 12px 12px 0;
+      color: #2c3e50;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.4rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2rem;
+      color: #0b1e33;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 0.6rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 550;
+      margin: 1.6rem 0 0.6rem 0;
+      color: #1e3649;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* 特点列表：干净、留白 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+      margin: 1.6rem 0 0.4rem 0;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid #eaeef3;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      color: #0f2b44;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+    }
+
+    .feature-item span {
+      color: #3a4c62;
+      font-size: 0.95rem;
+    }
+
+    .scenario-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 0.2rem 0;
+    }
+
+    .scenario-list li {
+      padding: 0.5rem 0 0.5rem 1.8rem;
+      position: relative;
+      border-bottom: 1px dashed #dfe5ed;
+      color: #253c51;
+    }
+
+    .scenario-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.4rem;
+      color: #6f8fae;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    .scenario-list li:last-child {
+      border-bottom: none;
+    }
+
+    .faq-slim {
+      background: #f5f7fa;
+      padding: 1.2rem 1.6rem;
+      border-radius: 16px;
+      margin: 1.6rem 0 0.4rem 0;
+    }
+
+    .faq-slim p {
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+      color: #1b344b;
+    }
+
+    .faq-slim small {
+      display: block;
+      color: #3f5a72;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .closing {
+      margin-top: 1.2rem;
+      padding: 1rem 0 0.6rem 0;
+      border-top: 1px solid #dce2ea;
+      font-size: 0.95rem;
+      color: #2e4b63;
+    }
+
+    a {
+      color: #1f4e79;
+      text-decoration: none;
+      border-bottom: 1px solid #b3c9de;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      border-bottom-color: #1f4e79;
+      color: #0a2944;
+    }
+
+    /* 响应式微调 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .feature-grid {
+        gap: 1rem;
+      }
+      .feature-item {
+        flex: 1 1 100%;
+      }
+      .opening p {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+      }
+      h2 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 开场短句：快速传达“这个站点是什么” -->
+  <div class="opening">
+    <p>
+      如果你刚遇到 <strong>leyu</strong> 这个名称，想先弄清楚它背后是什么平台、提供什么，那么这篇介绍就是为了帮你节省时间。
+    </p>
+  </div>
+
+  <!-- 承接段落：网站定位 -->
+  <div class="card">
+    <h2>一个偏向实际使用场景的站点</h2>
+    <p>
+      <a href="https://crm-leyu.com.cn">leyu</a> 是一个以客户关系管理为核心逻辑的线上工具集合。它的设计并不追求大而全，而是比较注重信息归拢、跟进记录和基础分析。对于需要把零散的客户线索或沟通记录整理成可查看、可筛选的列表的人来说，这个站点提供了一条相对直接的路。
+    </p>
+    <p>
+      和市面上很多强调「智能化」的平台不同，leyu 的界面更接近一个整理好的工作台：左侧导航划分出常用板块，中间区域展示数据或卡片，右侧有时呈现快速操作入口。整体给人的感觉是「信息整齐」，没有太多干扰。
+    </p>
+  </div>
+
+  <!-- 特点列表：卡片式，每条一个区块 -->
+  <div class="card">
+    <h2>几个比较明显的特征</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>客户卡片模式</strong>
+        <span>不是简单的表格，每条客户信息以卡片形式展示，可以自定义字段顺序，方便快速浏览核心摘要。</span>
+      </div>
+      <div class="feature-item">
+        <strong>跟进时间线</strong>
+        <span>每次沟通、回访、备注都会按时间排列，支持添加附件和快速标签，回顾历史时不需要翻多个窗口。</span>
+      </div>
+      <div class="feature-item">
+        <strong>基础分组与过滤</strong>
+        <span>按阶段、来源、负责人等维度筛选，也可以创建自定义分组。过滤条件支持保存为常用视图。</span>
+      </div>
+      <div class="feature-item">
+        <strong>轻量权限区分</strong>
+        <span>支持设置查看范围与编辑权限，适合小团队或部门内部使用，避免信息被误改。</span>
+      </div>
+    </div>
+    <!-- 再补充一行说明 -->
+    <p style="margin-top: 0.8rem; font-size: 0.95rem; color: #3f5a72;">
+      这些功能并不新奇，但胜在设置门槛低，不需要花太多时间配置就能直接开始录入。
+    </p>
+  </div>
+
+  <!-- 场景提示（代替常见的“适用场景”，更像用户自述） -->
+  <div class="card">
+    <h2>什么情况下你会需要它</h2>
+    <ul class="scenario-list">
+      <li>你手上有几十到几百个联系人，需要记录每次沟通要点，但目前还在用零散的表格或备忘录。</li>
+      <li>你想知道某个客户上次联系是什么时候、说过什么，但翻聊天记录太麻烦。</li>
+      <li>团队里几个人共同跟进一批客户，想避免重复联系或遗漏跟进。</li>
+      <li>你不需要复杂的营销自动化或报表，只需一个能快速查询和录入的地方。</li>
+    </ul>
+    <p style="margin-top: 0.6rem; font-size: 0.93rem; color: #3f5a72;">
+      在这些场景下，<a href="https://crm-leyu.com.cn">leyu</a> 提供的功能基本能覆盖，而且学习和迁移成本比较低。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要：只选两个最相关的问题 -->
+  <div class="card">
+    <h2>两个常被问到的点</h2>
+    <div class="faq-slim">
+      <p>✻ leyu 需要下载客户端吗？</p>
+      <small>不需要。它直接通过浏览器访问，适配电脑和移动端屏幕，登录后即可使用。没有独立的桌面软件。</small>
+    </div>
+    <div class="faq-slim">
+      <p>✻ 数据存在哪里？</p>
+      <small>数据存储在站点服务器端，访问时需要网络。平台提供了基础的导出功能，可以定期备份客户列表。</small>
+    </div>
+  </div>
+
+  <!-- 温和结尾：不是强行总结，而是留一句平实的说明 -->
+  <div class="closing">
+    <p>
+      如果你正在找一个结构清晰、没有过度包装的客户信息整理工具，<a href="https://crm-leyu.com.cn">leyu</a> 值得花十分钟看看它的界面布局是否顺手。每个团队习惯不同，实际用起来合不合适，简单试一下就能判断。
+    </p>
+    <p style="margin-top: 0.5rem; color: #4b6a83;">
+      希望这篇介绍帮你快速判断这个站是否值得进一步了解。
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
